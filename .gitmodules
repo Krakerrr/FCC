@@ -1,3 +1,15 @@
 [submodule "R9SBUS"]
 	path = R9SBUS
 	url = https://github.com/Krakerrr/R9SBUS.git
+[submodule "FCA"]
+	path = FCA
+	url = https://github.com/Krakerrr/FCA.git
+[submodule "Timer"]
+	path = Timer
+	url = https://github.com/Krakerrr/Timer.git
+[submodule "PWM"]
+	path = PWM
+	url = https://github.com/Krakerrr/PWM.git
+[submodule "ICM20608g"]
+	path = ICM20608g
+	url = https://github.com/Krakerrr/IMU_ICM20608g.git
