@@ -1,0 +1,3 @@
+[submodule "R9SBUS"]
+	path = R9SBUS
+	url = https://github.com/Krakerrr/R9SBUS.git
