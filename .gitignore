@@ -13,6 +13,7 @@ Release/
 release/
 
 # Locally stored "Eclipse launch configurations"
+*.launch
 .launch
 
 # Prerequisites

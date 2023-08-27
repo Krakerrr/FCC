@@ -29,7 +29,28 @@ void HAL_MspInit(void)
 }
 
 
+void HAL_UART_MspInit(UART_HandleTypeDef *huart)
+{
+	UARTprintmsg_GPIOInit(huart);
 
+	R9SBUS_GPIOInit(huart);
+}
+
+void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htimer)
+{
+	SYSTIMER_GPIOInit(htimer);
+}
+
+void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef *htim)
+{
+	PWM_GPIO_Initialization(htim);
+}
+
+
+void HAL_I2C_MspInit(I2C_HandleTypeDef* hi2c)
+{
+	ICM20608g_GPIO_I2C_Initialization(hi2c);
+}
 
 
 

@@ -23,5 +23,11 @@ void SystemClock_Config_HSE(uint8_t clock_freq);
 #define SYS_CLOCK_FREQ_168_MHZ 168
 
 
+#include "UARTprintf.h"
+#include "r9sbus.h"
+#include "ICM20608g.h"
+#include "FCA.h"
+#include "PWM.h"
+#include "SysTimer.h"
 
 #endif /* INC_MAIN_APP_H_ */

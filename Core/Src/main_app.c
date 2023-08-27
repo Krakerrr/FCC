@@ -8,14 +8,29 @@
 #include "main_app.h"
 
 
+
+
 int main(void) {
-
-
 
 	HAL_Init();
 
 	SystemClock_Config_HSE(SYS_CLOCK_FREQ_50_MHZ);
 
+	UARTprintmsg_Init();
+
+	ICM20608g_Initialization();
+
+	PWM_Initialization();
+
+	R9SBUS_Init();
+
+	FCA_initialize();
+
+	SYSTIMER_Init();
+
+	SYSTIMER_Start_IT();
+
+	R9SBUS_RX_STARTtoIDLE_IT();
 
 	while(1);
 	return 0;
