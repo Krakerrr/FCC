@@ -1,0 +1,57 @@
+# Eclipse
+
+#metadata
+.metadata/
+
+#settings
+.settings/
+
+#Debug
+Debug/
+debug/
+Release/
+release/
+
+# Locally stored "Eclipse launch configurations"
+.launch
+
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+*.bin
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
