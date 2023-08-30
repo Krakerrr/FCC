@@ -17,18 +17,13 @@ ExternalOutputs_FCA FCA_Y;
 
 void SYSTIMER_200HzTASK(void)
 {
-
+	ICM20608g_Get6Data( &ICM20608g );
 }
 
 void SYSTIMER_100HzTASK1(void)
 {
 
-	uint32_t tick, tick1;
 
-	tick = HAL_GetTick();
-	ICM20608g_Get6Data( &ICM20608g );
-	tick1 = HAL_GetTick();
-	UARTprintmsg("time passed : %d ms \n", tick1 - tick );
 }
 
 void SYSTIMER_100HzTASK2(void)
