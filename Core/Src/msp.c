@@ -31,7 +31,7 @@ void HAL_MspInit(void)
 
 void HAL_UART_MspInit(UART_HandleTypeDef *huart)
 {
-	UARTprintmsg_GPIOInit(huart);
+	RF_GPIOInit(huart);
 
 	R9SBUS_GPIOInit(huart);
 }

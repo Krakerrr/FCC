@@ -10,12 +10,18 @@
 
 extern I2C_HandleTypeDef 	hICM20608g_I2C;
 extern UART_HandleTypeDef 	hR9SBUS;
+extern UART_HandleTypeDef 	hRF;
 extern TIM_HandleTypeDef 	hSYSTIMER;
 
 void SysTick_Handler(void)
 {
 	HAL_IncTick();
 	HAL_SYSTICK_IRQHandler();
+}
+
+void USART2_IRQHandler(void)
+{
+	HAL_UART_IRQHandler(&hRF);
 }
 
 void I2C1_EV_IRQHandler(void)
@@ -34,7 +40,7 @@ void TIM6_DAC_IRQHandler(void)
 }
 
 
-// syste faults
+// system faults
 
 void NMI_Handler(void)
 {

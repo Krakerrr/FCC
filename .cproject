@@ -45,10 +45,10 @@
 									<listOptionValue builtIn="false" value="../Core/Inc"/>
 									<listOptionValue builtIn="false" value="&quot;../FCA/FCA&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../FCA/rt&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../UARTprintmsg/Inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../ICM20608g/Inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../PWM/Inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../R9SBUS/Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../RF/Inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../Timer/Inc&quot;"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32F4xx_HAL_Driver/Inc"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
@@ -79,8 +79,6 @@
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.819660906" name="MCU Output Converter Motorola S-rec with symbols" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec"/>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1854335946.1806194320" name="stm32f4xx_it.h" rcbsApplicability="disable" resourcePath="Core/Inc/stm32f4xx_it.h" toolsToInvoke=""/>
-					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1854335946.938397330" name="main.h" rcbsApplicability="disable" resourcePath="Core/Inc/main.h" toolsToInvoke=""/>
 					<sourceEntries>
 						<entry excluding="Inc/stm32f4xx_it.h|Inc/main.h|Src/stm32f4xx_it.c|Src/stm32f4xx_hal_msp.c|Src/main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
@@ -88,8 +86,8 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="ICM20608g"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="PWM"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="R9SBUS"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="RF"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Timer"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="UARTprintmsg"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -176,8 +174,8 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="ICM20608g"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="PWM"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="R9SBUS"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="RF"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Timer"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="UARTprintmsg"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

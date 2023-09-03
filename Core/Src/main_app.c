@@ -16,7 +16,7 @@ int main(void) {
 
 	SystemClock_Config_HSE(SYS_CLOCK_FREQ_50_MHZ);
 
-	UARTprintmsg_Init();
+	RF_Init();
 
 	ICM20608g_Initialization();
 

@@ -13,3 +13,6 @@
 [submodule "ICM20608g"]
 	path = ICM20608g
 	url = https://github.com/Krakerrr/IMU_ICM20608g.git
+[submodule "RF"]
+	path = RF
+	url = https://github.com/Krakerrr/RF.git

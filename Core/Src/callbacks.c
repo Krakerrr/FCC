@@ -7,33 +7,28 @@
 
 #include "main_app.h"
 
-
-
-Struct_ICM20608g ICM20608g;
-sR9SBUS_data R9SBUS_data;
-
-ExternalInputs_FCA FCA_U;
-ExternalOutputs_FCA FCA_Y;
-
+// SYSTIMER Callbakcs
 void SYSTIMER_200HzTASK(void)
 {
-	ICM20608g_Get6Data( &ICM20608g );
+	ICM20608g_GetData();
 }
 
 void SYSTIMER_100HzTASK1(void)
 {
-
-
+	RF_SendTelemetryDATA();
 }
 
 void SYSTIMER_100HzTASK2(void)
 {
-	memcpy(FCA_U.KS_channels, R9SBUS_data.channels, sizeof(FCA_U.KS_channels));
+	FCA_Set_Inputs();
 	FCA_step();
+	FCA_Set_Outputs();
+}
 
-	PWM_SET_CHANNEL1(FCA_Y.Servo1CMD);
-	PWM_SET_CHANNEL2(FCA_Y.Servo2CMD);
-
+// Comm Callbacks
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+{
+	RF_TxCpltCallback(huart);
 }
 
 void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
