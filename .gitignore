@@ -1,4 +1,9 @@
 # Eclipse
+*main.c
+*stm32f4xx_hal_msp.c
+*stm32f4xx_it.c
+*main.h
+*stm32f4xx_it.h
 
 #metadata
 .metadata/
