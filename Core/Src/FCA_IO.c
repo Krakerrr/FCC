@@ -34,7 +34,7 @@ void FCA_Set_Inputs(void)
 	FCA_U.IMU_gyro_y 	= ICM20608g_data.gyro_y;
 	FCA_U.IMU_gyro_z 	= ICM20608g_data.gyro_z;
 	FCA_U.IMU_temp   	= ICM20608g_data.temp;
-	FCA_U.IMU_status 	= ICM20608g_data.status;
+	FCA_U.IMU_status 	= ICM20608g_data.datastatus;
 }
 
 void FCA_Set_Outputs(void)
