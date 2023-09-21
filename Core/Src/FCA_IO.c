@@ -18,6 +18,8 @@ ExternalOutputs_FCA FCA_Y;
 
 void FCA_Set_Inputs(void)
 {
+	FCA_U.FCC_Clock = SYSTIMER_Clock;
+
 	// set KS
 	memcpy( FCA_U.KS_channels, R9SBUS_data.channels, sizeof(FCA_U.KS_channels));
 	FCA_U.KS_ch17 		= R9SBUS_data.ch17;
@@ -39,7 +41,7 @@ void FCA_Set_Inputs(void)
 
 void FCA_Set_Outputs(void)
 {
-	memcpy( RF_data.payload_address, FCA_Y.RFOUT, RF_DATAPAYLOADSIZE);
+	memcpy( &RF_data.telemetrydata[2], FCA_Y.RFOUT, RF_DATAPAYLOADSIZE);
 	PWM_SET_CHANNEL1(FCA_Y.Servo1CMD);
 	PWM_SET_CHANNEL2(FCA_Y.Servo2CMD);
 //	PWM_SET_CHANNEL3(FCA_Y.Servo3CMD);

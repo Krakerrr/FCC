@@ -7,14 +7,15 @@
 
 #include "main_app.h"
 
-
-
+void TESTGPIOinit(void);
 
 int main(void) {
 
 	HAL_Init();
 
-	SystemClock_Config_HSE(SYS_CLOCK_FREQ_50_MHZ);
+	SystemClock_Config_HSE(SYS_CLOCK_FREQ_168_MHZ);
+
+	TESTGPIOinit();
 
 	RF_Init();
 
@@ -36,7 +37,19 @@ int main(void) {
 	return 0;
 }
 
+void TESTGPIOinit(void)
+{
+	GPIO_InitTypeDef gpio_test = {0};
 
+	__HAL_RCC_GPIOD_CLK_ENABLE();
+
+	gpio_test.Pin   	= GPIO_PIN_9 | GPIO_PIN_10;
+	gpio_test.Mode  	= GPIO_MODE_OUTPUT_PP;
+	gpio_test.Pull  	= GPIO_PULLUP;
+	gpio_test.Speed 	= GPIO_SPEED_FREQ_VERY_HIGH;
+	gpio_test.Alternate = R9SBUS_GPIO_AF;
+	HAL_GPIO_Init( GPIOD, &gpio_test);
+}
 
 void SystemClock_Config_HSE(uint8_t clock_freq)
 {

@@ -8,10 +8,11 @@
 
 #include "main_app.h"
 
-extern I2C_HandleTypeDef 	hICM20608g_I2C;
-extern UART_HandleTypeDef 	hR9SBUS;
-extern UART_HandleTypeDef 	hRF;
-extern TIM_HandleTypeDef 	hSYSTIMER;
+//extern I2C_HandleTypeDef 	hICM20608g_I2C;
+//extern UART_HandleTypeDef 	hR9SBUS;
+//extern UART_HandleTypeDef 	hRF;
+//extern TIM_HandleTypeDef 	hSYSTIMER;
+//extern DMA_HandleTypeDef 	hRF_DMA_TX;
 
 void SysTick_Handler(void)
 {
@@ -39,6 +40,10 @@ void TIM6_DAC_IRQHandler(void)
 	HAL_TIM_IRQHandler(&hSYSTIMER);
 }
 
+void DMA1_Stream6_IRQHandler(void)
+{
+	HAL_DMA_IRQHandler(&hRF_DMA_TX);;
+}
 
 // system faults
 

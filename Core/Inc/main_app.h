@@ -24,7 +24,7 @@ void SystemClock_Config_HSE(uint8_t clock_freq);
 
 
 #include "RF.h"
-#include "../../SBUS/Inc/r9sbus.h"
+#include "r9sbus.h"
 #include "ICM20608g.h"
 #include "FCA.h"
 #include "PWM.h"
