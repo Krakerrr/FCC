@@ -10,7 +10,8 @@
 void TESTGPIOinit(void);
 
 int main(void) {
-
+	// TODO: add return for inits and check it
+	// TODO: FPV RF setting edited -> power lowered for pc usb
 	HAL_Init();
 
 	SystemClock_Config_HSE(SYS_CLOCK_FREQ_168_MHZ);
@@ -23,7 +24,7 @@ int main(void) {
 
 	PWM_Initialization();
 
-	R9SBUS_Init();
+	//	R9SBUS_Init();
 
 	FCA_initialize();
 
@@ -31,12 +32,13 @@ int main(void) {
 
 	SYSTIMER_Start_IT();
 
-	R9SBUS_RX_STARTtoIDLE_IT();
+	//	R9SBUS_RX_STARTtoIDLE_IT();
 
 	while(1);
 	return 0;
 }
 
+// TODO: Remove Test GPIO
 void TESTGPIOinit(void)
 {
 	GPIO_InitTypeDef gpio_test = {0};
@@ -131,12 +133,12 @@ void SystemClock_Config_HSE(uint8_t clock_freq)
 
 	if( HAL_RCC_OscConfig(&osc_init) != HAL_OK)
 	{
-		Error_Handler();
+		Error_Handler(E_RCCOSCConfig);
 	}
 
 	if( HAL_RCC_ClockConfig(&clck_init, FLatency) != HAL_OK)
 	{
-		Error_Handler();
+		Error_Handler(E_RCCClokcConfig);
 	}
 
 	/* SYSTICK CONFIG */
@@ -145,8 +147,9 @@ void SystemClock_Config_HSE(uint8_t clock_freq)
 }
 
 
-void Error_Handler(void)
+void Error_Handler(uint8_t errorcode)
 {
+	(void) errorcode;
 	while (1)
 	{
 	}

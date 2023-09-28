@@ -11,7 +11,7 @@
 #include "stdint.h"
 #include "stm32f4xx_hal.h"
 
-void Error_Handler(void);
+void Error_Handler(uint8_t errorcode);
 void SystemClock_Config_HSE(uint8_t clock_freq);
 
 #define TRUE 	1
@@ -22,6 +22,30 @@ void SystemClock_Config_HSE(uint8_t clock_freq);
 #define SYS_CLOCK_FREQ_120_MHZ 120
 #define SYS_CLOCK_FREQ_168_MHZ 168
 
+
+typedef enum
+{
+	E_RFInit = 0,
+	E_RFDMAInit,
+	E_PWMInit,
+	E_PWMConfigChannel1,
+	E_PWMConfigChannel2,
+	E_PWMConfigChannel3,
+	E_PWMConfigChannel4,
+	E_PWMStartCH1,
+	E_PWMStartCH2,
+	E_PWMStartCH3,
+	E_PWMStartCH4,
+	E_SysTimerInit,
+	E_SysTimerSTART_IT,
+	E_I2CInit,
+	E_I2CSendByte,
+	E_I2CReadByte,
+	E_ICMInit,
+	E_SBUSInit,
+	E_RCCOSCConfig,
+	E_RCCClokcConfig
+}_config_error;
 
 #include "RF.h"
 #include "r9sbus.h"
